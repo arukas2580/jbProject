@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html ng-app="jorugiBoardApp">
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script src="/js/jorugi_board.js"></script>
+<meta charset="UTF-8">
+<title>Jorugi Board</title>
+</head>
+<body>
+	
+	<div ng-controller="MainCtrl">
+	<h1>{{text}}</h1>
+		<table>
+	   		<colgroup>
+	   			<col style="width:100px;">
+	   			<col style="width:100px;">
+	   			<col style="width:100px;">
+	   		</colgroup>
+	   		<tr>
+	   			<th>id</th>
+	   			<th>text</th>
+	   			<th></th>
+	   		</tr>
+	   		<tr ng-repeat="jorugiData in jorugiDataList">
+	   			<td>{{jorugiData.id}}</td>
+	   			<td>{{jorugiData.text}}</td>
+	   			<td></td>
+	   		</tr>
+	   </table>
+	</div>
+    <!--div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" ng-controller="appController" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!  ${jorugiTable.get(id)} </h1>
+    </div-->
+    <!-- 
+    <div ng-app="jorugiApp" ng-controller="MainCtrl">
+	   {{text}}<br/>
+	   <table>
+	   		<colgroup>
+	   			<col style="width:100px;">
+	   			<col style="width:100px;">
+	   			<col style="width:100px;">
+	   		</colgroup>
+	   		<tr>
+	   			<th>id</th>
+	   			<th>text</th>
+	   			<th></th>
+	   		</tr>
+	   		<tr ng-repeat="jorugiData in jorugiDataList">
+	   			<td>{{jorugiData.id}}</td>
+	   			<td>{{jorugiData.text}}</td>
+	   			<td></td>
+	   		</tr>
+	   		<tr>
+	   			<td>
+	   				<input ng-model="newId" type="text"/>
+	   			</td>
+	   			<td>
+	   				<input ng-model="newText" type="text"/>
+	   			</td>
+	   			<td>
+	   				<button ng-click="addNewJorugi()">추가</button>
+	   			</td>
+	   		</tr>
+	   </table>
+	</div> 
+	 -->
+</body>
+</html>

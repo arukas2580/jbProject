@@ -1,0 +1,53 @@
+server:
+  port: 9009
+  session.timeout: 7200 # Session timeout in seconds.
+  session.persistent: true 
+
+mybatis:
+  config-location: classpath:/mybatis-config.xml
+  check-config-location: true
+
+spring:
+  datasource:
+    initialize: false
+    test-while-idle: true
+    time-between-eviction-runs-millis: 600000
+    validation-query: select 1 # mysql
+    test-on-borrow: true 
+    
+  http.encoding:
+    charset: UTF-8
+    enabled: true
+    force: true
+
+logging.level:
+  org.apache.velocity.runtime: WARN
+  org.springframework: INFO
+  org.webjars: WARN
+  org.mybatis: WARN
+  com.jorugi: TRACE # resultset 만 안보려면 DEBUG 로 변경
+  com.jorugi.mapper.JorugiMapper: TRACE
+  
+---
+
+spring:
+  profiles: dev     
+  
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/jorugi?autoReconnect=true&characterEncoding=utf-8
+    connection-properties: autoReconnect=true;
+    username: root
+    password: jorugi
+    driver-class-name: com.mysql.jdbc.Driver   
+     
+---
+
+spring:
+  profiles: prod
+  
+  datasource:   
+    url: jdbc:mysql://127.0.0.1:3306/jorugi?autoReconnect=true&characterEncoding=utf-8
+    connection-properties: autoReconnect=true;
+    username: root
+    password: jorugi
+    driver-class-name: com.mysql.jdbc.Driver
