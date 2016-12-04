@@ -12,7 +12,7 @@
     	<h1>{{text}}</h1>
 		<br/>
 		<br/>
-		<button ng-click="moveJorugiBoard()">게시판1</button>
+		<button ng-click="moveJorugiBoard()">게시판2</button>
 		</br>
 		
 	</div> 
