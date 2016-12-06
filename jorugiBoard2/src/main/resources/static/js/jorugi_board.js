@@ -1,13 +1,14 @@
 var myApp = angular.module('jorugiBoardApp', []);
 
 myApp.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {  
-	alert('!!!');
+	
     $scope.text = 'Jorugi Board';   
     
     $scope.jorugiDataList = [];
     $scope.newId = "";
     $scope.newText = "";
-
+    
+    //게시판 처음 전체 조회
     function getJorugiDataList() {
 		var requestUrl = "/api/getJorugiBoardList";
 		var params = null;
