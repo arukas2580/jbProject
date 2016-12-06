@@ -8,11 +8,11 @@
 	</settings>
     
     <typeAliases>
-        <package name="com.jorugi.model"/>
+        <package name="com.example.jorugiBoard.model"/>
     </typeAliases>
 
     <mappers>
-        <package name="com.jorugi.mapper"/>
+        <package name="com.example.jorugiBoard.mapper"/>
     </mappers>
 
 </configuration>

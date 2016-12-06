@@ -10,7 +10,7 @@ myApp.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
     
     //게시판 처음 전체 조회
     function getJorugiDataList() {
-		var requestUrl = "/api/getJorugiBoardList";
+		var requestUrl = "/api/jorugi";
 		var params = null;
     	
 	    $http.post(requestUrl, params)
