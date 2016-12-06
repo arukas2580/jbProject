@@ -21,21 +21,7 @@ myApp.controller('MainCtrl', ['$scope', '$http', function ($scope, $http) {
 	        	
 	        	
 	            var data = result.data;
-	            /*
-	            if (data.success === false) {
-	                console.log(data);
-	
-	                var errorMessage = data.message;
-	                if (data.messageDetails) {
-	                    errorMessage += "\n\n" + data.messageDetails.join("\n");
-	                }
-	
-	                alert(errorMessage);
-	                return;
-	            }                
-	
-	            $scope.loginUserCorpName = data.corpName;
-	            */
+
 	        });
     }
     
